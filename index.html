@@ -12,7 +12,10 @@
         <ul>
           <li><a href="https://perkalian.netlify.app/">Perkalian Game!</a></li>
           <li>
-            <a href="https://github.com/hamonangann/perkalian-web/archive/refs/heads/main.zip">Download</a>
+            <a
+              href="https://github.com/hamonangann/perkalian-web/archive/refs/heads/main.zip"
+              >Download</a
+            >
           </li>
         </ul>
       </nav>
@@ -20,7 +23,9 @@
 
     <div class="main-container">
       <div class="flex-container-column card">
-        <div class="title-message"><h3>Ayo hitung hasil perkalian ini!</h3></div>
+        <div class="title-message">
+          <h3>Ayo hitung hasil perkalian ini!</h3>
+        </div>
 
         <div class="flex-container-row">
           <h2 id="left-number">1</h2>
@@ -55,7 +60,11 @@
 
       <div class="flex-container-column">
         <div class="flex-container-column card">
-          <div class="title-message"><h3>Perhitungan terakhir:</h3></div>
+          <div class="title-message" style="text-align: center">
+            <h3 style="color: red">Sisa Waktu:</h3>
+            <h3 style="color: red" id="timer">5<span>s</span></h3>
+            <h3>Perhitungan terakhir:</h3>
+          </div>
           <div class="flex-container-row">
             <h2 id="prev-left-number">...</h2>
             <h2 class="prev-operator">x</h2>
@@ -66,7 +75,9 @@
         </div>
         <div class="flex-container-column card">
           <div class="title-message">
-            <h3 style="color: blue">Skor tertinggi: <span id="highest-score">0</span></h3>
+            <h3 style="color: blue">
+              Skor tertinggi: <span id="highest-score">0</span>
+            </h3>
           </div>
           <div class="title-message">
             <h3>Level: <span id="level">1</span></h3>
@@ -79,7 +90,10 @@
     </div>
 
     <footer>
-      <p>Mohon ikuti ketentuan lisensi. <a href="https://github.dev/hamonangann/perkalian-web">Kode sumber.</a></p>
+      <p>
+        Mohon ikuti ketentuan lisensi.
+        <a href="https://github.dev/hamonangann/perkalian-web">Kode sumber.</a>
+      </p>
     </footer>
 
     <script src="assets/game.js"></script>
