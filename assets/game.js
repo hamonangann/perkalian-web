@@ -197,4 +197,27 @@ for (let button of buttons) {
   });
 }
 
+document.addEventListener("keydown", function (event) {
+  if (event.key >= "0" && event.key <= "9") {
+    inputDigit(event.key);
+    updateDisplay();
+    return;
+  }
+
+  if (event.key === "Enter") {
+    checkAnswer();
+    clearDisplay();
+    updateDisplay();
+    return;
+  }
+
+  if (event.key === "Backspace") {
+    clearDisplay();
+    updateDisplay();
+    return;
+  }
+})
+
+
+
 showHighscoreFirst();
