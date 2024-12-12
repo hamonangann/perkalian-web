@@ -51,13 +51,11 @@ function timer() {
 function timeOutHandler(x) {
   alert("Waktu telah habis, level Anda akan naik dan nyawa Anda akan dikurangi 1");
   clearInterval(x);
-  nextLevel();
   decrementLives();
   if (game.lives <= 0) {
-    alert("Yah, permainan berakhir!");
-    highscoreHandler();
-    highscoreUpdate();
-    initLevel();
+    livesOutHandler();
+  } else {
+    nextLevel();
   }
   clearDisplay();
   updateDisplay();
@@ -170,8 +168,6 @@ function showHighscoreFirst() {
     }
     document.querySelector("#highest-score").innerText = game.highscore;
   };
-
-  timer();
 }
 
 const buttons = document.querySelectorAll(".button");
