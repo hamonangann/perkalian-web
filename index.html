@@ -23,8 +23,11 @@
 
     <div class="main-container">
       <div class="flex-container-column card">
+        <div class="flex-container-row">
+          <div class="button language">ID/EN</div>
+        </div>
         <div class="title-message">
-          <h3>Ayo hitung hasil perkalian ini!</h3>
+          <h3 id="title__text"></h3>
         </div>
 
         <div class="flex-container-row">
@@ -52,18 +55,18 @@
           <div class="button">3</div>
         </div>
         <div class="flex-container-row">
-          <div class="button clear">Hapus</div>
+          <div class="button clear" id="delete"></div>
           <div class="button">0</div>
-          <div class="button enter">Enter</div>
+          <div class="button enter" id="enter">Enter</div>
         </div>
       </div>
 
       <div class="flex-container-column">
         <div class="flex-container-column card">
           <div class="title-message" style="text-align: center">
-            <h3 style="color: red">Sisa Waktu:</h3>
-            <h3 style="color: red" id="timer">5<span>s</span></h3>
-            <h3>Perhitungan terakhir:</h3>
+            <h3 style="color: red" id="time-left"></h3>
+            <h3 style="color: red" id="timer">-</h3>
+            <h3 id="last-count"></h3>
           </div>
           <div class="flex-container-row">
             <h2 id="prev-left-number">...</h2>
@@ -75,22 +78,20 @@
         </div>
         <div class="flex-container-column card">
           <div class="title-message">
-            <h3 style="color: blue">
-              Skor tertinggi: <span id="highest-score">0</span>
-            </h3>
+            <h3 style="color: blue" id="highest-score__text"></h3>
           </div>
           <div class="title-message">
             <h3>Level: <span id="level">1</span></h3>
           </div>
           <div class="title-message">
-            <h3>Sisa nyawa: <span id="lives">3</span></h3>
+            <h3 id="lives__text"></h3>
           </div>
         </div>
       </div>
     </div>
 
     <footer>
-      <p>
+      <p id="footer__text">
         Mohon ikuti ketentuan lisensi.
         <a href="https://github.dev/hamonangann/perkalian-web">Kode sumber.</a>
       </p>

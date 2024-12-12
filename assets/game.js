@@ -16,10 +16,41 @@ function initLevel() {
   game.level = "1";
   game.lives = "3";
   game.highscore = localStorage.getItem("highScore");
+  game.language = "ID";
 }
 
+function toggleLanguage() {
+  if (game.language === "ID") {
+    game.language = "EN"
+    document.querySelector("#title__text").innerHTML = "Let's count this product!"
+    document.querySelector("#delete").innerHTML = "Del"
+    document.querySelector("#time-left").innerHTML = "Time left: "
+    document.querySelector("#last-count").innerHTML = "Last count: "
+    document.querySelector("#highest-score__text").innerHTML = `Highest score: <span id="highest-score">` + game.highscore + `</span>`
+    document.querySelector("#lives__text").innerHTML = `Lives: <span id="lives">` + game.lives + `</span>`
+    document.querySelector("#footer__text").innerHTML = `Please follow license. <a href="https://github.dev/hamonangann/perkalian-web">Source code.</a>`
+  }
+
+  else {
+    game.language = "ID"
+    document.querySelector("#title__text").innerHTML = "Ayo hitung hasil perkalian ini!"
+    document.querySelector("#delete").innerHTML = "Hapus"
+    document.querySelector("#time-left").innerHTML = "Sisa waktu :"
+    document.querySelector("#last-count").innerHTML = "Perhitungan terakhir: "
+    document.querySelector("#highest-score__text").innerHTML = `Skor tertinggi: <span id="highest-score">` + game.highscore + `</span>`
+    document.querySelector("#lives__text").innerHTML = `Sisa nyawa: <span id="lives">` + game.lives + `</span>`
+    document.querySelector("#footer__text").innerHTML = `Mohon ikuti ketentuan lisensi. <a href="https://github.dev/hamonangann/perkalian-web">Kode sumber.</a>`
+  }
+}
+
+
 function livesOutHandler() {
-  alert("Yah, permainan berakhir!");
+  if (game.language === "ID") {
+    alert("Yah, permainan berakhir!");
+  } else {
+    alert("Game over!")
+  }
+
   highscoreHandler();
   highscoreUpdate();
   initLevel();
@@ -50,7 +81,11 @@ function timer() {
   }, 1000);
 }
 function timeOutHandler(x) {
-  alert("Waktu telah habis, level Anda akan naik dan nyawa Anda akan dikurangi 1");
+  if (game.language === "ID") {
+    alert("Waktu telah habis, level Anda naik dan nyawa Anda berkurang 1!");
+  } else {
+    alert("Time is up, you level up and you lose 1 live!")
+  }
   decrementLives();
   if (game.lives <= 0) {
     clearInterval(x);
@@ -79,12 +114,16 @@ function checkAnswer() {
     message += right.toString();
     message += " = ";
     message += expected.toString();
-    // alert(message);
   } else {
     // False answer
     decrementLives();
 
-    message += "Yah! Sayang sekali jawabanmu salah, yang benar: ";
+    if (game.language === "ID") {
+      message += "Yah! Sayang sekali jawabanmu salah, yang benar: ";
+    } else {
+      message += "Too bad your answer is false, correct answer: "
+    }
+    
     message += left.toString();
     message += " x ";
     message += right.toString();
@@ -169,15 +208,21 @@ function showHighscoreFirst() {
       localStorage.setItem("highScore", "0");
     }
     document.querySelector("#highest-score").innerText = game.highscore;
-
-    initLevel(); 
   };
+  initLevel(); 
+  toggleLanguage();
+
 }
 
 const buttons = document.querySelectorAll(".button");
 for (let button of buttons) {
   button.addEventListener("click", function (event) {
     const target = event.target;
+
+    if (target.classList.contains("language")) {
+      toggleLanguage();
+      return;
+    }
 
     if (target.classList.contains("clear")) {
       clearDisplay();
