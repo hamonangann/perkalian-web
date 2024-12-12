@@ -9,6 +9,7 @@ const game = {
 };
 
 function initLevel() {
+  document.getElementById("timer").innerHTML = "-"
   game.answer = "0";
   game.leftNumber = "1";
   game.rightNumber = "1";
@@ -50,11 +51,12 @@ function timer() {
 }
 function timeOutHandler(x) {
   alert("Waktu telah habis, level Anda akan naik dan nyawa Anda akan dikurangi 1");
-  clearInterval(x);
   decrementLives();
   if (game.lives <= 0) {
+    clearInterval(x);
     livesOutHandler();
   } else {
+    clearInterval(x);
     nextLevel();
   }
   clearDisplay();
@@ -66,7 +68,6 @@ function checkAnswer() {
   const right = parseInt(game.rightNumber);
   const expected = left * right;
   const actual = parseInt(game.answer);
-  let currentLives = parseInt(game.lives);
 
   let message = "";
 
@@ -92,7 +93,8 @@ function checkAnswer() {
     alert(message);
   }
 
-  if (currentLives <= 0) {
+  if (game.lives <= 0) {
+    clearInterval(game.curIntervalID);
     livesOutHandler();
   } else {
     // next level
@@ -167,6 +169,8 @@ function showHighscoreFirst() {
       localStorage.setItem("highScore", "0");
     }
     document.querySelector("#highest-score").innerText = game.highscore;
+
+    initLevel(); 
   };
 }
 
