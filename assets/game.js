@@ -28,7 +28,7 @@ function toggleLanguage() {
     document.querySelector("#last-count").innerHTML = "Last count: "
     document.querySelector("#highest-score__text").innerHTML = `Highest score: <span id="highest-score">` + game.highscore + `</span>`
     document.querySelector("#lives__text").innerHTML = `Lives: <span id="lives">` + game.lives + `</span>`
-    document.querySelector("#footer__text").innerHTML = `Please follow license. <a href="https://github.dev/hamonangann/perkalian-web">Source code.</a>`
+    document.querySelector("#footer__text").innerHTML = `Please follow license. <a href="https://github.com/hamonangann/perkalian-web">Source code.</a>`
   }
 
   else {
@@ -39,7 +39,7 @@ function toggleLanguage() {
     document.querySelector("#last-count").innerHTML = "Perhitungan terakhir: "
     document.querySelector("#highest-score__text").innerHTML = `Skor tertinggi: <span id="highest-score">` + game.highscore + `</span>`
     document.querySelector("#lives__text").innerHTML = `Sisa nyawa: <span id="lives">` + game.lives + `</span>`
-    document.querySelector("#footer__text").innerHTML = `Mohon ikuti ketentuan lisensi. <a href="https://github.dev/hamonangann/perkalian-web">Kode sumber.</a>`
+    document.querySelector("#footer__text").innerHTML = `Mohon ikuti ketentuan lisensi. <a href="https://github.com/hamonangann/perkalian-web">Kode sumber.</a>`
   }
 }
 
