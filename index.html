@@ -21,74 +21,76 @@
       </nav>
     </header>
 
-    <div class="main-container">
-      <div class="flex-container-column card">
-        <div class="flex-container-row">
-          <div class="button language">ID/EN</div>
-        </div>
-        <div class="title-message">
-          <h3 id="title__text"></h3>
-        </div>
-
-        <div class="flex-container-row">
-          <h2 id="left-number">1</h2>
-          <h2 class="operator">x</h2>
-          <h2 id="right-number">1</h2>
-          <h2 id="right-number">=</h2>
-        </div>
-        <div class="display">
-          <h1 id="answer">0</h1>
-        </div>
-        <div class="flex-container-row">
-          <div class="button">7</div>
-          <div class="button">8</div>
-          <div class="button">9</div>
-        </div>
-        <div class="flex-container-row">
-          <div class="button">4</div>
-          <div class="button">5</div>
-          <div class="button">6</div>
-        </div>
-        <div class="flex-container-row">
-          <div class="button">1</div>
-          <div class="button">2</div>
-          <div class="button">3</div>
-        </div>
-        <div class="flex-container-row">
-          <div class="button clear" id="delete"></div>
-          <div class="button">0</div>
-          <div class="button enter" id="enter">Enter</div>
-        </div>
-      </div>
-
-      <div class="flex-container-column">
+    <main>
+      <div class="main-container">
         <div class="flex-container-column card">
-          <div class="title-message" style="text-align: center">
-            <h3 style="color: #dc322f" id="time-left"></h3>
-            <h3 style="color: #dc322f" id="timer">-</h3>
-            <h3 id="last-count"></h3>
+          <div class="flex-container-row">
+            <div class="button language">ID/EN</div>
+          </div>
+          <div class="title-message">
+            <h3 id="title__text"></h3>
+          </div>
+
+          <div class="flex-container-row">
+            <h2 id="left-number">1</h2>
+            <h2 class="operator">x</h2>
+            <h2 id="right-number">1</h2>
+            <h2 id="right-number">=</h2>
+          </div>
+          <div class="display">
+            <h1 id="answer">0</h1>
           </div>
           <div class="flex-container-row">
-            <h2 id="prev-left-number">...</h2>
-            <h2 class="prev-operator">x</h2>
-            <h2 id="prev-right-number">...</h2>
-            <h2 class="prev-operator">=</h2>
-            <h2 id="prev-answer">...</h2>
+            <div class="button">7</div>
+            <div class="button">8</div>
+            <div class="button">9</div>
+          </div>
+          <div class="flex-container-row">
+            <div class="button">4</div>
+            <div class="button">5</div>
+            <div class="button">6</div>
+          </div>
+          <div class="flex-container-row">
+            <div class="button">1</div>
+            <div class="button">2</div>
+            <div class="button">3</div>
+          </div>
+          <div class="flex-container-row">
+            <div class="button clear" id="delete"></div>
+            <div class="button">0</div>
+            <div class="button enter" id="enter">Enter</div>
           </div>
         </div>
-        <div class="flex-container-column card">
-          <div class="title-message">
-            <h3 style="color: #268bd2" id="highest-score__text"></h3>
+
+        <div class="flex-container-column">
+          <div class="flex-container-column card">
+            <div class="title-message" style="text-align: center">
+              <h3 style="color: #dc322f" id="time-left"></h3>
+              <h3 style="color: #dc322f" id="timer">-</h3>
+              <h3 id="last-count"></h3>
+            </div>
+            <div class="flex-container-row">
+              <h2 id="prev-left-number">...</h2>
+              <h2 class="prev-operator">x</h2>
+              <h2 id="prev-right-number">...</h2>
+              <h2 class="prev-operator">=</h2>
+              <h2 id="prev-answer">...</h2>
+            </div>
           </div>
-          <div class="title-message">
-            <h3>Level: <span id="level">1</span></h3>
-          </div>
-          <div class="title-message">
-            <h3 id="lives__text"></h3>
+          <div class="flex-container-column card">
+            <div class="title-message">
+              <h3 style="color: #268bd2" id="highest-score__text"></h3>
+            </div>
+            <div class="title-message">
+              <h3>Level: <span id="level">1</span></h3>
+            </div>
+            <div class="title-message">
+              <h3 id="lives__text"></h3>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
 
     <footer>
       <p id="footer__text">

@@ -50,6 +50,10 @@ nav a:hover {
   flex-direction: row;
 }
 
+main {
+  min-height: calc(100vh - 120px);
+}
+
 .main-container {
   display: flex;
   flex-direction: row;
@@ -112,6 +116,10 @@ footer a {
 }
 
 @media screen and (max-width: 513px) {
+  main {
+    height: 100%;
+  }
+
   .button {
     padding: 10px;
   }
@@ -134,7 +142,7 @@ footer a {
     color: #839496;
   }
 
-  .main-container {
+  main {
     background-color: #002b36;
   }
 
@@ -168,7 +176,7 @@ footer a {
     color: #657b83;
   }
 
-  .main-container {
+  main {
     background-color: #fdf6e3;
   }
 
